@@ -29,7 +29,7 @@ if ($coun === 0 ){
   </div>
 </div>';
 }else {
-  }
+
 
   
 ?>
@@ -58,15 +58,16 @@ foreach ($cart  as $value) :
 <td>
 <form action ="#"  method="post" style=" color: #f4b7b4;">
 <input type="hidden"  name="ID" value ="<?php echo $value['product_id']; ?>">
-<button type="submit" name ="delete" style="background-color: white; border : none;" ><i class='far fa-times-circle' style='font-size:24px ; padding-top : 40px; color:gray;'></i></button>
-</td>
-<td  ><img src = "image/<?php echo $value['Product_image']; ?>" width = "90px"></td>
+<button type="submit" name ="delete" style="background-color: #f8f9fa; border : none;" ><i class='far fa-times-circle' style='font-size:24px ; padding-top : 40px; color:gray;'></i></button>
+</form></td>
+<td  ><img src = "./admin/product/images/<?php echo $value['Product_image']; ?>" width = "90px"></td>
 <td style='padding-top : 50px;'><?php echo $value['Product_name']; ?></td> 
-<td  style='padding-top : 50px;'><input type="number" name="q" style=" width: 50px" value="<?php echo $value['quantity'];
-$Qu+=$value['quantity'];?>"> </td> 
+<td  style='padding-top : 50px;'><form action ="#"  method="post" style=" color: #f4b7b4;"><input type="hidden"  name="ID" value ="<?php echo $value['product_id']; ?>"><input type="number" name="q" style=" width: 50px" value="<?php echo $value['quantity'];
+$Qu+=$value['quantity'];?>">  <input type="submit" class="btn btn-primary" name="Update" value="Update Cart" style="background-color:  #717ce8;  color: white; border: none; "></td> 
 <td  style='padding-top : 50px;'><input type ='hidden' name ="priceid" value ="<?php   $sub_price =$value['quantity'] * $value['sub_total'] ; echo $sub_price ?>" > 
-<label><?php $totel += $sub_price ;
-echo $sub_price ;?></label></td>
+<label><?php $totel += $sub_price ; 
+echo $sub_price ;?></label>
+</form></td>
 </tr> 
 <?php
 endforeach ;
@@ -74,9 +75,10 @@ endforeach ;
 
 <tr scope='col' >
 <td colspan="5"  style=" padding:2% 0;">
+<form action ="#"  method="post" style=" color: #f4b7b4;">
 <input type="text" name="copone" style="  height: 30px" placeholder="Coupon code">
 <input type="submit" class="btn btn-primary" name="couponbtn" value="Applay coupon" style="background-color: #717ce8;  color: white; border: none;">
-<input type="submit" class="btn btn-primary" name="Update" value="Update Cart" style="background-color:  #717ce8;  color: white; border: none; ">
+<!-- <input type="submit" class="btn btn-primary" name="Update" value="Update Cart" style="background-color:  #717ce8;  color: white; border: none; "> -->
 </form>
 </td>
 </tr>
@@ -132,7 +134,7 @@ if(isset($_POST['delete'])){
   $product_id =$_POST['ID'];
   $sql="DELETE FROM `users_cart` WHERE product_id =  $product_id ";
   $stat=$pdo->query($sql);
-  // header('location:cart.php');
+  echo "<script> window.location.href ='cart.php'</script>";
 }
 catch (PDOException $e) {
     echo $sql . "<br>" . $e->getMessage();
@@ -145,26 +147,27 @@ $_SESSION['totel']= $totel ;
 
 $_SESSION['q']= $Qu ;
 
-  if(isset($_POST['Update'])){
-    try{
-    $quantity =$_POST['q'];
-    $product_id =$_POST['ID'];
-    $sql="UPDATE `users_cart` SET `quantity` = '$quantity' WHERE product_id = $product_id ";
-    $stat=$pdo->query($sql);
-    $price =$_POST['priceid']  ;
-    $_POST['price'] = $price * $quantity;
-    $value['sub_total'] =  $sub_price;
-    // header('location:cart.php');
-  }
-  catch (PDOException $e) {
-      echo $sql . "<br>" . $e->getMessage();
-  }
-  finally {
-      $pdo = NULL;
-  }
-    } 
+if(isset($_POST['q'])){
+  try{
+  $quantity =$_POST['q'];
+  $product_id =$_POST['ID'];
+  $sql="UPDATE `users_cart` SET `quantity` = '$quantity' WHERE product_id = $product_id ";
+  $stat=$pdo->query($sql);
+  $price =$_POST['priceid']  ;
+  $_POST['price'] = $price * $quantity;
+  $value['sub_total'] =  $sub_price;
+
+  echo "<script> window.location.href ='cart.php'</script>";
+}
+catch (PDOException $e) {
+    echo $sql . "<br>" . $e->getMessage();
+}
+finally {
+    $pdo = NULL;
+}
+  } 
 ?>
-<?php } }
+<?php }} }
 catch (PDOException $e){
   echo "Faild"  . $e->getMessage() . "<br/>";
  

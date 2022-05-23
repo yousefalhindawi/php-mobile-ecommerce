@@ -46,7 +46,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $product_name = $_POST['product_name'];
     $product_description = $_POST['product_description'];
     $product_price = $_POST['product_price'];
-    
+    $category_id = $_POST['categories'];
 
     
     
@@ -118,7 +118,7 @@ function randomString($n) {
     <form method="post" action ="#" style="margin-left: 2%; margin-right: 2%" enctype="multipart/form-data">
 
       <?php if ($products[0]['product_m_img']): ?>
-          <img src="<?php echo $products[0]['product_m_img']; ?>" style="width: 150px; height: 150px; display: block;">
+          <img src="./images/<?php echo $products[0]['product_m_img']; ?>" style="width: 150px; height: 150px; display: block;">
       <?php endif ?>
       <div class="form-group">
         <label>Product Name</label>
@@ -142,9 +142,9 @@ function randomString($n) {
         <label class="form-label">Categories</label>
         <select class="form-select" aria-label="Default select example" name="categories">
           <option selected>Open this select menu</option>
-          <?php foreach ($share as $value):?>
+          <?php foreach ($share as $value) { ?>
           <option value="<?php echo $value['category_id'] ?>"><?php echo $value['category_name'] ?></option>
-          <?php endforeach; ?>
+          <?php } ?>
         </select>
 
         </select>

@@ -91,9 +91,9 @@ if (isset($_SESSION['refresh']) && $_SESSION['refresh'] == true) {
         <div class="col-lg-4 col-md-4">
           <div class="single-product">
             <div class="product-img">
-              <img class="img-fluid w-100" src="image/<?php echo $category_img ?>" style="height: 300px"alt="image" />
+              <img class="img-fluid w-100" src="./admin/categories/images/<?php echo $category_img ?>" style="height: 300px"alt="image" />
               <div class="p_icon">
-                <a href="category.php?c_id=<?php echo $category_id; ?>">
+              <a href="individual_category.php?c_id=<?php echo $category_id  ?>">
                 <i class="fa-regular fa-eye" style="font-size:1.5em; "></i>
                 </a>
 
@@ -189,7 +189,7 @@ if (isset($_SESSION['refresh']) && $_SESSION['refresh'] == true) {
         <div class="col-lg-4 col-md-4">
           <div class="single-product">
             <div class="product-img">
-              <img class="img-fluid w-100" src="image/<?php echo $product_img ?>"  alt="image" />
+              <img class="img-fluid w-100" src="./admin/product/images/<?php echo $product_img ?>"  alt="image" />
               <!-- <img class="img-fluid w-100" src="./image/1920x665_1__60.jpg" alt="image" /> -->
               <div class="p_icon">
                 <a href="single-product.php?id=<?php echo $product_id; ?>">

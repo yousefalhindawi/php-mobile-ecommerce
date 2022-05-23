@@ -30,29 +30,24 @@
                 $sql = "SELECT * FROM orders  JOIN users WHERE orders.user_id = $id   AND users.user_id = $id;";
                 $stat = $pdo->query($sql);
                 $order = $stat->fetchAll();
+                
+                $count = ($stat->rowCount() - 1);
                 }
                 catch (PDOException $e){
                   echo "Faild"  . $e->getMessage() . "<br/>";
                  
                 }
                 ?>
-                     <?php
-               
-               foreach($order as $value):
-                
- 
-                 ?>
+                 
                  
                      <tr scope="row">
-                     <td> <?php  echo  $value['user_name']; ?></td>
-                         <td> <?php  echo  $value['user_email'] ; ?></td>
-                         <td><?php echo   $value['order_address']; ?></td>
-                         <td> <?php  echo '(+962)'.$value['phone_number'] ; ?></td>
-                         <td><?php echo   $value['order_total_amount']; ?></td>
+                     <td> <?php  echo  $order[$count]['user_name']; ?></td>
+                         <td> <?php  echo  $order[$count]['user_email'] ; ?></td>
+                         <td><?php echo   $order[$count]['order_address']; ?></td>
+                         <td> <?php  echo '(+962)'.$order[$count]['phone_number'] ; ?></td>
+                         <td><?php echo   $order[$count]['order_total_amount']; ?></td>
                            
-                     </tr>     <?php
-                    endforeach;
-                 ?></tbody> </table>
+                     </tr></tbody> </table>
                     
             </div>
                     

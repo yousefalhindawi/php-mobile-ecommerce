@@ -48,7 +48,7 @@ include("./header.php");
                 <div class="single-product card pb-3">
                   <div class="product-img">
                     <a href="single-product.php?id=<?php echo $product_id; ?>">
-                      <img class="card-img" src="./image/<?php echo $product_m_img; ?>" style="height:200px" alt="" />
+                      <img class="card-img" src="./admin/product/images/<?php echo $product_m_img; ?>" style="height:200px" alt="" />
                     </a>
                     <div class="p_icon text-center">
                       <a href="single-product.php?id=<?php echo $product_id; ?>">
@@ -57,7 +57,8 @@ include("./header.php");
                       <a href="#">
                       <i class="fa-regular fa-heart" style="font-size:1.5em; color :#707bfb;"></i>
                       </a>
-                      <a href="category.php?action=add_to_cart&page=index&quantity=1&size=25&pcid=<?php echo $product_id; ?>&ucid=<?php echo $_SESSION['userLogin'] ?>">
+                      <a href="category.php?&&action=add_to_cart&page=index&quantity=1&size=25&pcid=<?php echo $product_id ?>&ucid=<?php echo $_SESSION['userLogin'] ?>&image=<?php echo $product_m_img ?>&name=<?php echo $product_name ?>&price=<?php echo $product_price ?>">
+                      <!-- <a href="category.php?action=add_to_cart&page=index&quantity=1&size=25&pcid=<?php echo $product_id; ?>&ucid=<?php echo $_SESSION['userLogin'] ?>"> -->
                       <i class="fa-solid fa-cart-arrow-down" style="font-size:1.5em; color :#707bfb;"></i>
                       </a>
                     </div>

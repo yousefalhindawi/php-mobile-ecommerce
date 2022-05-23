@@ -45,7 +45,7 @@ if (isset($_GET["action"]) && $_GET["action"] == "add_to_cart") {
   $insertIntoCart = "INSERT INTO users_cart (user_id, product_id, quantity, sub_total, Product_image, Product_name) VALUES (?,?,?,?,?,?)";
   $stmt = $pdo->prepare($insertIntoCart);
   $stmt->execute([$userCart_id, $prodcutCart_id, $prodcutQuantity, $sub_total, $Product_image, $Product_name]);
-  header('location:index.php');
+  // header('location:index.php');
 
 }
 
@@ -223,7 +223,7 @@ header {
                         $category_name = $category1['category_name'];
                       ?>
                         <li class=" dropdown-item">
-                          <a class="nav-link" href="<?php echo strtolower($category_name) ?>.php?c_id=<?php echo $category_id; ?>"><?php echo $category_name ?></a>
+                          <a class="nav-link" href="individual_category.php?c_id=<?php echo $category_id; ?>"><?php echo $category_name ?></a>
                         </li>
                         <!-- <li><hr class="dropdown-divider"></li> -->
                       <?php } ?>
