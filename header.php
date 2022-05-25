@@ -48,6 +48,9 @@ if (isset($_SESSION['userLogin']) && isset($_GET["action"]) && $_GET["action"] =
   // header('location:index.php');
 
 }
+else if (!isset($_SESSION['userLogin']) && isset($_GET['addlog']) && $_GET['addlog'] == 'addalert') {
+     header('location:login.php?addlog=addalert');
+}
 
 ?>
 
@@ -143,6 +146,23 @@ header {
     .cont {
       display: flex;
     }
+
+    .single-product .product-img .p_icon form button {
+  display: inline-block;
+  height: 36px;
+  line-height: 40px;
+  width: 36px;
+  text-align: center;
+  background: #fff;
+  border-color: transparent;
+  border-radius: 30px;
+  color: #2a2a2a;
+  /* margin-right: 25px; */
+}
+.single-product .product-img .p_icon button:hover {
+  color: #fff;
+  background: #707bfb;
+}
 
     @media (max-width:500px) {
       .cont {
@@ -277,7 +297,9 @@ header {
                                                         }
                                                         ?>
                         </span>
+                        <?php if (isset($_SESSION['userLogin'])) { ?>
                         <i class="fa fa-shopping-cart " style="font-size:1.5em; color :#707bfb;"></i>
+                        <?php } ?>
                       </a>
                     </li>
                     <?php if (isset($_SESSION['userLogin'])) { ?>

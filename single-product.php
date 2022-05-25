@@ -156,6 +156,7 @@ if (!$stmt->execute([$p_id])) {
               <input type="hidden" name="image" value="<?php echo $product_m_img ?>">
               <input type="hidden" name="name" value="<?php echo $product_name ?>">
               <input type="hidden" name="price" value="<?php echo $product_price = $product['product_price'] ?>" >
+              <input type="hidden" name="addlog" value="addalert" >
                <!-- <a href="index.php?action=add_to_cart&page=index&quantity=1&size=25&pcid=<?php echo $product_id; ?>&ucid=<?php echo $_SESSION['userLogin'] ?>&image=<?php echo $product_img ?>&name=<?php echo $product_name ?>&price=<?php echo $product_price ?>"> -->
               <input type="hidden" name="action" value="add_to_cart">
 
@@ -186,7 +187,33 @@ if (!$stmt->execute([$p_id])) {
             </select>
             
             <div class="card_area">
-              <button class="myBtn" type="submit"><a class="main_btn my-3">Add to cart</a></button>
+              <button class="myBtn" type="submit" value="addalert"><a class="main_btn my-3" >Add to cart</a></button>
+
+              <?php  if (!isset($_SESSION['userLogin']) && isset($_GET['addlog']) && $_GET['addlog'] == 'addalert') { ?>
+  
+  
+  <div class="modal fade" id="discountModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-body text-center">
+<div class="icon text-danger">
+<img src="image/grunge-limited.png" width="50%">
+</div>
+<div class="notice">
+<h4>Get 20% Discount</h4>
+<p>For the next 24 hours you can get any product at half-price.</p>
+
+<p>Use promo code 20-OFF at checkout.</p>
+</div>
+<div class="code" style="font-size: 19px;" >promo code :<span style="color:brown;" >  smart100</span></div><br><br>
+</div>
+
+</div>
+</div>
+</div>
+
+<?php } ?>
+              
             </div>
           </form>
         </div>
@@ -258,7 +285,7 @@ if (!$stmt->execute([$p_id])) {
                 <div class="review_item">
                   <div class="media">
                     <div class="d-inline mr-3">
-                      <img width="75px" class="rounded-circle" src="image/<?php echo $user_img; ?>" alt="" />
+                      <img width="75px" class="rounded-circle" src="./admin/users/images/<?php echo $user_img; ?>" alt="" />
                     </div>
                     <div class="media-body">
                       <h4><?php echo $user_name ?></h4>

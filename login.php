@@ -14,6 +14,7 @@
 session_start();
 
 
+
 $imagePath = "";
 $errors = [];
 // Validation Function
@@ -178,6 +179,14 @@ if (isset($_POST['loginSubmit'])) {
             </ul>
         </nav>
     </header>
+
+	<!-- If the user add to cart without login -->
+	<?php if (!isset($_SESSION['userLogin']) && isset($_GET['addlog']) && $_GET['addlog'] == 'addalert') { ?>
+    <div style ="width: 370px ; padding: 10px; margin: 20px auto; color:#9966ff; background-color :#eaedfe; font-size : 2em; text-align: center; border-radius: 10px" >
+      You Have to Login, To purchase the  product !
+    </div>
+  <?php } ?>
+
 	<section>
 		<div class="main">
 			<input type="checkbox" id="chk" aria-hidden="true">

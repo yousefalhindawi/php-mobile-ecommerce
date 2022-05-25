@@ -50,6 +50,7 @@ if (isset($_SESSION['refresh']) && $_SESSION['refresh'] == true) {
   /* background-repeat: no-repeat; */
   /* background-size: cover; */
 }
+
   </style>
 </head>
 
@@ -241,25 +242,42 @@ if (isset($_SESSION['refresh']) && $_SESSION['refresh'] == true) {
                 <a href="single-product.php?id=<?php echo $product_id; ?>">
                 <i class="fa-regular fa-eye" style="font-size:1.5em;"></i>
                 </a>
-                <a href="index.php?action=add_to_cart&page=index&quantity=1&size=25&pcid=<?php echo $product_id; ?>&ucid=<?php echo $_SESSION['userLogin'] ?>&image=<?php echo $product_img ?>&name=<?php echo $product_name ?>&price=<?php echo $product_price ?>">
-              <i class="fa-solid fa-cart-arrow-down" style="font-size:1.5em;"></i>
-              </a>
+                <!-- <a href=""> -->
+                  <form method="GET" action="" class = "d-inline">
+                    <input type="hidden" name="action" value="add_to_cart">
+                    <input type="hidden" name="page" value="index">
+                    <input type="hidden" name="quantity" value="1">
+                    <input type="hidden" name="color" value="black">
+                    <input type="hidden" name="pcid" value="<?php echo $product_id; ?>">
+                    <input type="hidden" name="ucid" value="<?php echo $_SESSION['userLogin'] ?>">
+                    <input type="hidden" name="image" value="<?php echo $product_img ?>">
+                    <input type="hidden" name="name" value="<?php echo $product_name ?>">
+                    <input type="hidden" name="price" value="<?php echo $product_price ?>">
+                    <input type="hidden" name="addlog" value="addalert">
+                    <button type="submit" name="addlog" value="addalert"><i class="fa-solid fa-cart-arrow-down" style="font-size:1.5em;"></i></button>
+                    
+                  </form>
+
+                  <!-- <a href="index.php?action=add_to_cart&page=index&quantity=1&size=25&pcid=<?php echo $product_id; ?>&ucid=<?php echo $_SESSION['userLogin'] ?>&image=<?php echo $product_img ?>&name=<?php echo $product_name ?>&price=<?php echo $product_price ?>&addlog=addalert"> -->
+                    
+                    <!-- </a> -->
+                  </div>
+                </div>
+                <div class="product-btm text-center">
+                  <a href="#" class="d-block">
+                    <h4 style="font-size: 18px;"><?php echo "<strong>" . $product_name . "</strong>" ?></h4>
+                    <h6><?php echo $product_description  ?></h6>
+                  </a>
+                  <span class=""><?php echo $product_price . " JOD" ?></span>
+                </div>
               </div>
             </div>
-            <div class="product-btm text-center">
-              <a href="#" class="d-block">
-                <h4 style="font-size: 18px;"><?php echo "<strong>" . $product_name . "</strong>" ?></h4>
-                <h6><?php echo $product_description  ?></h6>
-              </a>
-                  <span class=""><?php echo $product_price . " JOD" ?></span>
-            </div>
+            <?php  } ?>
+            
           </div>
         </div>
-      <?php  } ?>
-
-    </div>
-  </div>
-</section>
+      </section>
+      
 <!--================ End Feature Product Area =================-->
 
 

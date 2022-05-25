@@ -57,10 +57,21 @@ include("./header.php");
                       <a href="#">
                       <i class="fa-regular fa-heart" style="font-size:1.5em; color :#707bfb;"></i>
                       </a>
-                      <a href="category.php?&&action=add_to_cart&page=index&quantity=1&size=25&pcid=<?php echo $product_id ?>&ucid=<?php echo $_SESSION['userLogin'] ?>&image=<?php echo $product_m_img ?>&name=<?php echo $product_name ?>&price=<?php echo $product_price ?>">
-                      <!-- <a href="category.php?action=add_to_cart&page=index&quantity=1&size=25&pcid=<?php echo $product_id; ?>&ucid=<?php echo $_SESSION['userLogin'] ?>"> -->
-                      <i class="fa-solid fa-cart-arrow-down" style="font-size:1.5em; color :#707bfb;"></i>
-                      </a>
+                      <form method="GET" action="" class = "d-inline">
+                    <input type="hidden" name="action" value="add_to_cart">
+                    <input type="hidden" name="page" value="index">
+                    <input type="hidden" name="quantity" value="1">
+                    <input type="hidden" name="color" value="black">
+                    <input type="hidden" name="pcid" value="<?php echo $product_id; ?>">
+                    <input type="hidden" name="ucid" value="<?php echo $_SESSION['userLogin'] ?>">
+                    <input type="hidden" name="image" value="<?php echo $product_m_img ?>">
+                    <input type="hidden" name="name" value="<?php echo $product_name ?>">
+                    <input type="hidden" name="price" value="<?php echo $product_price ?>">
+                    <input type="hidden" name="addlog" value="addalert">
+                    <button type="submit" name="addlog" value="addalert"><i class="fa-solid fa-cart-arrow-down" style="font-size:1.5em;"></i></button>
+                    
+                  </form>
+                      
                     </div>
                   </div>
                   <div class="product-btm text-center">
