@@ -34,7 +34,7 @@ if (isset($_GET['status']) && $_GET['status'] == 'logout') {
 // }
 
 // For Add To Cart
-if (isset($_GET["action"]) && $_GET["action"] == "add_to_cart") {
+if (isset($_SESSION['userLogin']) && isset($_GET["action"]) && $_GET["action"] == "add_to_cart") {
 
   $userCart_id = $_GET['ucid'];
   $prodcutCart_id = $_GET['pcid'];

@@ -58,7 +58,7 @@ foreach ($cart  as $value) :
 <td>
 <form action ="#"  method="post" style=" color: #f4b7b4;">
 <input type="hidden"  name="ID" value ="<?php echo $value['product_id']; ?>">
-<button type="submit" name ="delete" style="background-color: #f8f9fa; border : none;" ><i class='far fa-times-circle' style='font-size:24px ; padding-top : 40px; color:red;'></i></button>
+<button type="submit" name ="delete" style="background-color: #f8f9fa; border : none;" ><i style='font-size:20px ;color:red;margin-top:20px;' class='far'>&#xf2ed;</i></button>
 </form></td>
 <td  ><img src = "./admin/product/images/<?php echo $value['Product_image']; ?>" width = "90px"></td>
 <td style='padding-top : 50px;'><?php echo $value['Product_name']; ?></td> 
