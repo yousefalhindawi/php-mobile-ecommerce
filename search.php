@@ -84,12 +84,12 @@ require_once("./header.php");
                           
                         </div>
                       </div>
-                      <div class="product-btm">
+                      <div class="product-btm text-center">
                         <a href="#" class="d-block">
                           <h4><?php echo $product_name ?></h4>
                         </a>
-                        <div class="mt-3">
-                          <span class="mr-4"><?php echo $product_price . "JOD" ?></span>
+                        <div class="mt-3 text-center">
+                          <span class=""><?php echo $product_price . "JOD" ?></span>
                           <!-- <del><?php echo  "JOD" ?></del> -->
                         </div>
                       </div>

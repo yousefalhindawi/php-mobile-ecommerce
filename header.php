@@ -100,10 +100,10 @@ if (isset($_GET["action"]) && $_GET["action"] == "add_to_cart") {
   scroll-behavior: smooth;
 }
 body {
-  background-color: #f8f9fa;
+  background-color: transparent;
 }
 header { 
-  background-color: #eaedfe;
+  background-color: transparent;
 }
   .header_area{
       
@@ -184,7 +184,7 @@ header {
           <!-- Brand and toggle get grouped for better mobile display -->
           <a class="navbar-brand logo_h" href="./index.php">
               
-            <img src="./image/logo2.png" style=" width: 90px ;" alt="" />
+            <img src="./image/logoss.png" style=" width: 100px ;" alt="" />
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

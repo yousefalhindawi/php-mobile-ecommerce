@@ -18,7 +18,7 @@
       <div class="area"></div><nav class="main-menu">
             <ul>
                 <li>
-                    <a href="http://localhost/PHP_ECOMMERCE/admin/index.php">
+                    <a href="../index.php">
                         <i class="fa fa-home fa-2x"></i>
                         <span class="nav-text">
                             Dashboard
@@ -27,7 +27,7 @@
                   
                 </li>
                 <li class="has-subnav">
-                    <a href="http://localhost/PHP_ECOMMERCE/admin/product/index.php">
+                    <a href="../product/index.php">
                     <i class="fa fa-folder-open fa-2x"></i>
                         <span class="nav-text">
                            Product
@@ -36,7 +36,7 @@
                     
                 </li>
                 <li class="has-subnav">
-                    <a href="http://localhost/PHP_ECOMMERCE/admin/categories/index.php">
+                    <a href="../categories/index.php">
                        <i class="fa fa-list fa-2x"></i>
                         <span class="nav-text">
                         Categories
@@ -45,7 +45,7 @@
                     
                 </li>
                 <li class="has-subnav">
-                    <a href="http://localhost/php_ecommerce/admin/users/index.php">
+                    <a href="../users/index.php">
                        <i class="fa fa-users fa-2x"></i>
 
                         <span class="nav-text">
@@ -55,7 +55,7 @@
                    
                 </li>
                 <li>
-                    <a href="http://localhost/php_ecommerce/admin/adminn/index.php">
+                    <a href="../adminn/index.php">
                         <i class="fa fa-bar-chart-o fa-2x"></i>
                         <span class="nav-text">
                             Admin

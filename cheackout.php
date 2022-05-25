@@ -16,7 +16,7 @@
     }
 
     if (isset($_POST['checkbtn'])) {
-        $state = check($_POST['U-name'], $_POST['email'], $_POST['phone']);
+        $state = check($_POST['U-name'], $_POST['phone']);
         try {
             
             $id = $_SESSION['userLogin'];
@@ -25,7 +25,37 @@
             $stat = $pdo->prepare($sql);
             $stat->execute([':id' => $id, ':total' => $_SESSION['totel'], ':quantity' => $_SESSION['q'], ':phone' => $_POST['phone'], ':address' => $_POST['Address']]);
             
-            // $sql2 = "ALTER TABLE users_cart  DELETE WHERE user_id = ? ;";
+           
+            
+
+            
+            $sqlcart = "SELECT * FROM users_cart WHERE user_id =$id;";
+            $stmtcart = $pdo->query($sqlcart);
+            $cartorder = $stmtcart->fetchAll(); 
+            print_r($cartorder);  
+            
+            $sqlorders = "SELECT * FROM orders WHERE user_id =$id ORDER BY order_date DESC LIMIT 1;";
+            $stmtcart = $pdo->query($sqlorders);
+            $order = $stmtcart->fetch();
+            $order_id = $order['order_id'];
+            echo $order_id."<br />";
+           
+               
+            foreach ($cartorder as $cartorder_id => $cart){
+                $prodcut_id = $cart['product_id'];
+                $quantity = $cart['quantity'];
+                $sub_total = $cart['sub_total'];
+                echo $sub_total."<br />";
+                echo $quantity."<br />";
+                echo $prodcut_id."<br />";
+                
+                $sqlhistory = "INSERT INTO order_history (order_id, product_id, quantity, sub_total) VALUES (?,?,?,?);";
+                $stmthistory = $pdo->prepare($sqlhistory);
+                $stmthistory->execute([$order_id, $prodcut_id, $quantity, $sub_total]);
+            }
+            
+
+            $sql2 = "ALTER TABLE users_cart  DELETE WHERE user_id = ? ;";
             $sql2 = "DELETE FROM users_cart WHERE user_id = ? ;";
             $statement = $pdo->prepare($sql2);
             $statement->execute([$id]);
@@ -79,7 +109,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="Image">Email :</label>
-                        <input type="text" class="form-control" name="email" required value="<?php echo  $orders['user_email'] ?>">
+                        <input type="text" class="form-control" name="email" required value="<?php echo  $orders['user_email']?>" disabled>
                         <span class="error" style="color:red;"><?php echo $errors[1] ?? "" ?></span>
                     </div>
                     <div class="mb-3">
@@ -106,7 +136,7 @@
         </div>
     </div>
     <?php
-    function check($name, $email, $phone)
+    function check($name, $phone)
     {
         global $errors;
         $regexName      = "/^[A-z ]{3,}$/";

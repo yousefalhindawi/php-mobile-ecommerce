@@ -74,13 +74,13 @@ include("./header.php");
               // $product_price_on_sale = $row['product_price_on_sale'];
               // $sale_status = $row['sale_status'];
             ?>
-              <div class="col-lg-4 col-md-6">
-                <div class="single-product">
+              <div class="col-lg-4 col-md-6 my-5">
+                <div class="single-product card pb-3">
                   <div class="product-img">
                     <a href="single-product.php?id=<?php echo $product_id; ?>">
-                      <img class="card-img" src="./admin/product/images/<?php echo $product_m_img ?>" alt="" />
+                      <img class="card-img" src="./admin/product/images/<?php echo $product_m_img ?>" style="height:200px" alt="" />
                     </a>
-                    <div class="p_icon">
+                    <div class="p_icon text-center">
                       <a href="single-product.php?id=<?php echo $product_id; ?>">
                       <i class="fa-regular fa-eye" style="font-size:1.5em;"></i>
                       </a>
@@ -88,21 +88,16 @@ include("./header.php");
                       <i class="fa-solid fa-cart-arrow-down" style="font-size:1.5em;"></i>
                     </div>
                   </div>
-                  <div class="product-btm">
+                  <div class="product-btm text-center">
                     <a href="#" class="d-block">
-                      <h4>
-                          <div class="mt-3">
-                            <span class="mr-4"><?php echo $product_name ?></span>
-                          </div>
-                        
-                      </h4>
+                      <h4><?php echo $product_name ?></h4>
                     </a>
                   </div>
-                  <div class="product-btm">
+                  <div class="product-btm text-center">
                     <a href="#" class="d-block">
                       <h4>
                           <div class="mt-3">
-                            <span class="mr-4"><?php echo $product_price . " JOD" ?></span>
+                            <span class=""><?php echo $product_price . " JOD" ?></span>
                           </div>
                         
                       </h4>

@@ -25,7 +25,7 @@ include("./header.php");
 <!--================End Home Banner Area =================-->
 
 <!--================Category Product Area =================-->
-<section class="cat_product_area section_gap my-5">
+<section class="cat_product_area section_gap ">
   <div class="container">
     <div class="row flex-row-reverse">
       <div class="col-lg-9">
@@ -69,7 +69,7 @@ include("./header.php");
                     </a>
                     
                       <div class="mt-3">
-                        <span class="mr-4"><?php echo $product_price . " JOD" ?></span>
+                        <span class=""><?php echo $product_price . " JOD" ?></span>
                       </div>
                   </div>
                 </div>

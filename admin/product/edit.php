@@ -26,7 +26,10 @@ $stat='SELECT * FROM categories';
       // echo '<pre>';
       // var_dump($share);
       // echo '<pre>';
-
+      //  foreach ($share as $value) { 
+      //    echo $value['category_id']."<br/>";
+      // // <option value= "echo $value['category_id']" > echo $value['category_name'] </option>;
+      //  }
 
 
 
@@ -46,7 +49,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $product_name = $_POST['product_name'];
     $product_description = $_POST['product_description'];
     $product_price = $_POST['product_price'];
-    $category_id = $_POST['categories'];
+    
 
     
     
@@ -63,7 +66,9 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     }
     imagePath();
     
-    
+    $category_id = $_POST['categories'];
+    // echo $category_id;
+
     $statment = $pdo->prepare("UPDATE `products` SET `product_name` = :product_name, 
                                       `product_description` = :product_description, 
                                       `product_m_img`= :image, `product_price`= :product_price, `category_id` =:category_id WHERE product_id = :id");
@@ -161,6 +166,6 @@ function randomString($n) {
 <?php
 
 //sidebar include 
-include_once('../../headfoot/saidebar.php');
+// include_once('../../headfoot/saidebar.php');
 
 ?>

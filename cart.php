@@ -58,11 +58,11 @@ foreach ($cart  as $value) :
 <td>
 <form action ="#"  method="post" style=" color: #f4b7b4;">
 <input type="hidden"  name="ID" value ="<?php echo $value['product_id']; ?>">
-<button type="submit" name ="delete" style="background-color: #f8f9fa; border : none;" ><i class='far fa-times-circle' style='font-size:24px ; padding-top : 40px; color:gray;'></i></button>
+<button type="submit" name ="delete" style="background-color: #f8f9fa; border : none;" ><i class='far fa-times-circle' style='font-size:24px ; padding-top : 40px; color:red;'></i></button>
 </form></td>
 <td  ><img src = "./admin/product/images/<?php echo $value['Product_image']; ?>" width = "90px"></td>
 <td style='padding-top : 50px;'><?php echo $value['Product_name']; ?></td> 
-<td  style='padding-top : 50px;'><form action ="#"  method="post" style=" color: #f4b7b4;"><input type="hidden"  name="ID" value ="<?php echo $value['product_id']; ?>"><input type="number" name="q" style=" width: 50px" value="<?php echo $value['quantity'];
+<td  style='padding-top : 50px;'><form action ="#"  method="post" style=" color: #f4b7b4;"><input type="hidden"  name="ID" value ="<?php echo $value['product_id']; ?>"><input type="number" name="q" min ="1" style=" width: 50px" value="<?php echo $value['quantity'];
 $Qu+=$value['quantity'];?>">  <input type="submit" class="btn btn-primary" name="Update" value="Update Cart" style="background-color:  #717ce8;  color: white; border: none; "></td> 
 <td  style='padding-top : 50px;'><input type ='hidden' name ="priceid" value ="<?php   $sub_price =$value['quantity'] * $value['sub_total'] ; echo $sub_price ?>" > 
 <label><?php $totel += $sub_price ; 

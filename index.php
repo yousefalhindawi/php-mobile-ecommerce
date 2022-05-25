@@ -45,7 +45,11 @@ if (isset($_SESSION['refresh']) && $_SESSION['refresh'] == true) {
   background: rgb(234, 237, 254,0.4);
   
 }
-
+.offer_area {
+  background-image: url('image/store-pc.jpg');
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+}
   </style>
 </head>
 
@@ -69,7 +73,7 @@ if (isset($_SESSION['refresh']) && $_SESSION['refresh'] == true) {
     <div class="row justify-content-center">
       <div class="col-lg-12">
         <div class="main_title">
-          <h2><span style="color:#707bfb;">Top Category</span></h2>
+          <h1><span style="color:#707bfb;">Top Category</span></h1>
           <p>Bring called seed first of third give itself now ment</p>
         </div>
       </div>
@@ -88,7 +92,7 @@ if (isset($_SESSION['refresh']) && $_SESSION['refresh'] == true) {
         $category_img = $category2['category_img'];
       ?>
 
-        <div class="col-lg-4 col-md-4">
+        <div class="col-lg-3 col-md-3">
           <div class="single-product">
             <div class="product-img">
               <img class="img-fluid w-100" src="./admin/categories/images/<?php echo $category_img ?>" style="height: 300px"alt="image" />
@@ -101,7 +105,7 @@ if (isset($_SESSION['refresh']) && $_SESSION['refresh'] == true) {
             </div>
             <div class="product-btm">
               <a href="#" class="d-block">
-                <h4 style="font-size: 18px;"><?php echo "<strong>" . $category_name . "</strong>" ?></h4>
+                <h4 class="text-center" style="font-size: 18px;"><?php echo "<strong>" . $category_name . "</strong>" ?></h4>
               </a>
 
             </div>
@@ -156,6 +160,48 @@ if (isset($_SESSION['refresh']) && $_SESSION['refresh'] == true) {
 </section>
 <!-- End feature Area -->
 
+<!--================ Offer Area =================-->
+<section class="offer_area my-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="offset-lg-4 col-lg-6 text-center">
+        <div class="offer_content">
+          <h3 class="text-uppercase mb-40 text-light">All Mobile’s Accessories</h3>
+          <h2 class="text-uppercase text-light">20% off</h2>
+          <div class="container" style = " text-align: center ">
+  <button type="button" class="btn " data-toggle="modal" data-target="#discountModal"  style = " background-color: #707bfb; color :white;">
+    Show Discount
+  </button>
+</div>
+
+<div class="modal fade" id="discountModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <div class="icon text-danger">
+          <img src="image/grunge-limited.png" width="50%">
+        </div>
+        <div class="notice">
+          <h4>Get 20% Discount</h4>
+          <p>For the next 24 hours you can get any product at half-price.</p>
+
+          <p>Use promo code 20-OFF at checkout.</p>
+        </div>
+        <div class="code" style="font-size: 19px;" >promo code :<span style="color:brown;" >  smart100</span></div><br><br>
+      </div>
+
+    </div>
+  </div>
+</div>
+          <!-- <a href="#" class="main_btn mb-20 mt-5">Discover Now</a> -->
+          <p class="text-light my-3">Limited Time Offer</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--================ End Offer Area =================-->
+
 <!--================ Feature Product Area =================-->
 
 <section style="margin-top:0 !important; margin-bottom:0 ; padding-top:60px" class="feature_product_area section_gap_bottom_custom bg-light">
@@ -163,7 +209,7 @@ if (isset($_SESSION['refresh']) && $_SESSION['refresh'] == true) {
     <div class="row justify-content-center">
       <div class="col-lg-12">
         <div class="main_title">
-          <h2><span style="color:#707bfb;">Featured product</span></h2>
+          <h1><span style="color:#707bfb;">Featured product</span></h1>
           <p>Bring called seed first of third give itself now ment</p>
         </div>
       </div>
@@ -187,9 +233,9 @@ if (isset($_SESSION['refresh']) && $_SESSION['refresh'] == true) {
         $category_id = $product['category_id'];
       ?>
         <div class="col-lg-4 col-md-4">
-          <div class="single-product">
+          <div class="single-product card pb-3">
             <div class="product-img">
-              <img class="img-fluid w-100" src="./admin/product/images/<?php echo $product_img ?>"  alt="image" />
+              <img class="img-fluid w-100" src="./admin/product/images/<?php echo $product_img ?>" style="height:200px" alt="image" />
               <!-- <img class="img-fluid w-100" src="./image/1920x665_1__60.jpg" alt="image" /> -->
               <div class="p_icon">
                 <a href="single-product.php?id=<?php echo $product_id; ?>">
@@ -200,12 +246,12 @@ if (isset($_SESSION['refresh']) && $_SESSION['refresh'] == true) {
               </a>
               </div>
             </div>
-            <div class="product-btm">
+            <div class="product-btm text-center">
               <a href="#" class="d-block">
                 <h4 style="font-size: 18px;"><?php echo "<strong>" . $product_name . "</strong>" ?></h4>
                 <h6><?php echo $product_description  ?></h6>
               </a>
-                  <span class="mr-4"><?php echo $product_price . " JOD" ?></span>
+                  <span class=""><?php echo $product_price . " JOD" ?></span>
             </div>
           </div>
         </div>
