@@ -78,7 +78,7 @@ require_once("./header.php");
                           <a href="#">
                           <i class="fa-regular fa-heart" style="font-size:1.5em; color :#707bfb;"></i>
                           </a>
-                          <form method="GET" action="" class = "d-inline">
+                          <form method="POST" action="" class = "d-inline">
                     <input type="hidden" name="action" value="add_to_cart">
                     <input type="hidden" name="page" value="index">
                     <input type="hidden" name="quantity" value="1">

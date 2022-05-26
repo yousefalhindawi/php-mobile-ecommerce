@@ -84,7 +84,7 @@ include("./header.php");
                       <a href="single-product.php?id=<?php echo $product_id; ?>">
                       <i class="fa-regular fa-eye" style="font-size:1.5em;"></i>
                       </a>
-                      <form method="GET" action="" class = "d-inline">
+                      <form method="POST" action="" class = "d-inline">
                     <input type="hidden" name="c_id" value="<?php echo $c_id; ?>">
                     <input type="hidden" name="action" value="add_to_cart">
                     <input type="hidden" name="page" value="index">

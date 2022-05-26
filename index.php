@@ -243,7 +243,7 @@ if (isset($_SESSION['refresh']) && $_SESSION['refresh'] == true) {
                 <i class="fa-regular fa-eye" style="font-size:1.5em;"></i>
                 </a>
                 <!-- <a href=""> -->
-                  <form method="GET" action="" class = "d-inline">
+                  <form method="POST" action="" class = "d-inline">
                     <input type="hidden" name="action" value="add_to_cart">
                     <input type="hidden" name="page" value="index">
                     <input type="hidden" name="quantity" value="1">

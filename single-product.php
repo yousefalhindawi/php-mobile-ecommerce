@@ -147,7 +147,7 @@ if (!$stmt->execute([$p_id])) {
           <p>
             <?php echo $product_description ?>
           </p>
-          <form action="" method="get">
+          <form action="" method="POST">
             <div class="product_count">
               <label for="sst"  style="color:#707bfb;fontsize">Quantity:</label><br />
               <input type="number" name="quantity"  id="sst" min="1" value="1" title="Quantity:" class="form-control" style = "width: 165px"/>

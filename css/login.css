@@ -14,7 +14,7 @@ body{
 	/* background: linear-gradient(to right top, #fec601, #fecf1c, #fed82d, #fee13c, #feea49); */
 	
 	/* background: linear-gradient(to bottom, #9966ff 0%, #ff99cc 100%); */
-	background-color: #eaedfe;
+	background-color: transparent;
 	
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -32,7 +32,7 @@ header {
   align-content: center;
   padding-left:  50px;
   padding-right:  50px;
-  background-color:#eaedfe;
+  background-color:#fff;
 }
 /* .logo {
   text-decoration: none;
