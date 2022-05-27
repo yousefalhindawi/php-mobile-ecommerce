@@ -54,7 +54,7 @@ $statment->execute();
             <h5 class="card-title"><?php echo $product['product_name']?></h5>
             <h6 class="card-title"><?php echo $product['product_price']?></h6>
             <h6 class="card-title"><?php echo $product['category_name'] ?></h6>
-            <p class="card-text"><?php echo $product['product_description']?></p>
+            <p class="card-text"><?php echo substr($product['product_description'],0,20) ?></p>
 
             <form style="display: inline-block" method="post" action="./delete.php">
               <input type="hidden" name="id" value="<?php echo $product['product_id']; ?>">

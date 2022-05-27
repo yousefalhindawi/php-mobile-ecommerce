@@ -164,6 +164,19 @@ header {
   color: #fff;
   background: #707bfb;
 }
+.banner_single {
+  min-height: 100px;
+}
+.banner_area .banner_inner {
+    min-height: 100px;
+    background: #f6f6f6;
+}
+.section_gap {
+  padding : 0 ;
+}
+.banner_area .banner_inner .banner_content .page_link a:hover {
+  color: #737efb;
+}
 
     @media (max-width:500px) {
       .cont {

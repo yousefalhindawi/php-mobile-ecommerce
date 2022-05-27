@@ -24,7 +24,7 @@ require_once("./header.php");
 ?>
 
 <!--================Home Banner Area =================-->
-<section class="banner_area">
+<section class="banner_area banner_single">
   <div class="banner_inner d-flex align-items-center">
     <div class="container">
       <div class="banner_content d-md-flex justify-content-between align-items-center">

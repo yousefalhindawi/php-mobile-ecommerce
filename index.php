@@ -189,6 +189,9 @@ if (isset($_SESSION['refresh']) && $_SESSION['refresh'] == true) {
           <p>Use promo code 20-OFF at checkout.</p>
         </div>
         <div class="code" style="font-size: 19px;" >promo code :<span style="color:brown;" >  smart100</span></div><br><br>
+        <?php if (!isset($_SESSION['userLogin'])) { ?>
+        <span style="color:brown;" >You Have to Login, To benefit from the discount !</span>
+        <?php } ?>
       </div>
 
     </div>
@@ -236,7 +239,7 @@ if (isset($_SESSION['refresh']) && $_SESSION['refresh'] == true) {
         <div class="col-lg-4 col-md-4">
           <div class="single-product card pb-3">
             <div class="product-img">
-              <img class="img-fluid w-100" src="./admin/product/images/<?php echo $product_img ?>" style="height:200px" alt="image" />
+              <img class="img-fluid" src="./admin/product/images/<?php echo $product_img ?>" style="height:200px" alt="image" />
               <!-- <img class="img-fluid w-100" src="./image/1920x665_1__60.jpg" alt="image" /> -->
               <div class="p_icon">
                 <a href="single-product.php?id=<?php echo $product_id; ?>">
@@ -266,9 +269,15 @@ if (isset($_SESSION['refresh']) && $_SESSION['refresh'] == true) {
                 <div class="product-btm text-center">
                   <a href="#" class="d-block">
                     <h4 style="font-size: 18px;"><?php echo "<strong>" . $product_name . "</strong>" ?></h4>
-                    <h6><?php echo $product_description  ?></h6>
+                    
                   </a>
-                  <span class=""><?php echo $product_price . " JOD" ?></span>
+                  <div class="mt-3">
+                  <!-- <h6></h6> -->
+                  <p class="h6"><?php echo substr($product_description,0,22) ?></p>
+                </div>
+                  <div class="mt-3">
+                  <p class="h4"><?php echo $product_price . " JOD" ?></p>
+                </div>
                 </div>
               </div>
             </div>

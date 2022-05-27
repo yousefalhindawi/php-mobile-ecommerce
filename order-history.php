@@ -47,7 +47,7 @@
   <div class="container">
           <h3>Your order</h3>
           <br>
-          <table class="table table-striped table-hover">
+          <table class="table table-striped table-hover border border-secoundry">
               <thead>
                   <tr>
                       <!-- <th scope="col">Name </th> -->
@@ -91,3 +91,5 @@
               </tbody>
             </table>
   </div>
+
+  <?php include_once ('./footer.php') ?>

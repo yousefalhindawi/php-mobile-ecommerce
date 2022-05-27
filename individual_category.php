@@ -74,7 +74,7 @@ include("./header.php");
               // $product_price_on_sale = $row['product_price_on_sale'];
               // $sale_status = $row['sale_status'];
             ?>
-              <div class="col-lg-4 col-md-6 my-5">
+              <div class="col-lg-4 col-md-6 ">
                 <div class="single-product card pb-3">
                   <div class="product-img">
                     <a href="single-product.php?id=<?php echo $product_id; ?>">

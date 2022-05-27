@@ -44,7 +44,7 @@ include("./header.php");
               
             ?>
             
-              <div class="col-lg-4 col-md-6 my-5">
+              <div class="col-lg-4 col-md-6 ">
                 <div class="single-product card pb-3">
                   <div class="product-img">
                     <a href="single-product.php?id=<?php echo $product_id; ?>">
@@ -52,10 +52,10 @@ include("./header.php");
                     </a>
                     <div class="p_icon text-center">
                       <a href="single-product.php?id=<?php echo $product_id; ?>">
-                      <i class="fa-regular fa-eye" style="font-size:1.5em; color :#707bfb;"></i>
+                      <i class="fa-regular fa-eye" style="font-size:1.5em; "></i>
                       </a>
                       <a href="#">
-                      <i class="fa-regular fa-heart" style="font-size:1.5em; color :#707bfb;"></i>
+                      <i class="fa-regular fa-heart" style="font-size:1.5em; "></i>
                       </a>
                       <form method="POST" action="" class = "d-inline">
                     <input type="hidden" name="action" value="add_to_cart">
