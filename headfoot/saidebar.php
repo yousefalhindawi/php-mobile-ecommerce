@@ -57,9 +57,17 @@
                 </li>
                 <li>
                     <a href="../adminn/index.php">
-                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                    <i class="fa fa-user fa-2x"></i>
                         <span class="nav-text">
                             Admin
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../orders/index.php">
+                    <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            orders
                         </span>
                     </a>
                 </li>
@@ -68,7 +76,16 @@
             <ul class="logout">
                 <li>
                 <!-- <a class="nav-link mylink  " href="index.php?status=logout">Logout</a> -->
-                   <a href="http://localhost/project5/index.php?status=logout">
+                   <a href="http://localhost/php-mobile-ecommerce/index.php">
+                         <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+                            Home
+                        </span>
+                    </a>
+                </li>  
+                <li>
+                <!-- <a class="nav-link mylink  " href="index.php?status=logout">Logout</a> -->
+                   <a href="http://localhost/php-mobile-ecommerce/index.php?status=logout">
                          <i class="fa fa-power-off fa-2x"></i>
                         <span class="nav-text">
                             Logout

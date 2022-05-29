@@ -64,7 +64,7 @@ if (isset($_POST['update'])) {
                   <form class="form" method="post" action="./edit.php" enctype="multipart/form-data" >
 
                     <div class="mt-2">
-                      <button class="btn btn-primary" type="button" style="background:#717ce8;">
+                      <button class="btn btn-primary" type="button" style="">
 
                         <i class="fa fa-fw fa-camera"></i>
                         
@@ -75,7 +75,7 @@ if (isset($_POST['update'])) {
                     </div>
                   </div>
                   <div class="text-center text-sm-right">
-                    <span class="badge badge-secondary">administrator</span>
+                    <span class="badge badge-secondary">users</span>
                    
                   </div>
                 </div>
@@ -92,7 +92,7 @@ if (isset($_POST['update'])) {
                         <div class="row">
                           <div class="col">
                             <div class="form-group">
-                              <label>Full Name</label>
+                              <label class="text-primary">Full Name</label>
                               <input class="form-control" type="text" name="name" placeholder="" value="<?php echo $pro['user_name'] ?>">
                               <span class="error" style= "color:red;"><?php echo $errors[0] ?? "" ?></span>
                               </br>
@@ -103,7 +103,7 @@ if (isset($_POST['update'])) {
                         <div class="row">
                           <div class="col">
                             <div class="form-group">
-                              <label>Email</label>
+                              <label class="text-primary">Email</label>
                               <input class="form-control" type="email" placeholder="" name="email" value="<?php echo  $pro['user_email'] ?>">
                               <span class="error" style= "color:red;"><?php echo $errors[1] ?? "" ?></span>
                               </br>
@@ -113,7 +113,7 @@ if (isset($_POST['update'])) {
                         <div class="row">
                           <div class="col">
                             <div class="form-group">
-                              <label>Phone</label>
+                              <label class="text-primary">Phone</label>
                               <input class="form-control" type="text" placeholder="" name="phone" value="<?php echo  $pro['user_phone'] ?>">
                               <span class="error" style= "color:red;"><?php echo $errors[2] ?? "" ?></span></div>
                               </br>
@@ -122,7 +122,7 @@ if (isset($_POST['update'])) {
                         <div class="row">
                           <div class="col">
                             <div class="form-group">
-                              <label>Address</label>
+                              <label class="text-primary">Address</label>
                               <input class="form-control" type="text" name="address" placeholder="" value="<?php echo  $pro['user_address'] ?>">
                             </div>
                           </div>
@@ -133,10 +133,10 @@ if (isset($_POST['update'])) {
                   </br>
                     <div class="row">
                       <div class="col d-flex justify-content-end">
-                        <button class="btn btn-primary" type="submit" name="update" style="background:#717ce8;margin-right:10px;">Save Changes</button>
+                        <button class="btn btn-primary" type="submit" name="update" style=";margin-right:10px;">Save Changes</button>
                         </form>
                         <form action="" method="post">
-                        <a href=""><button class="btn btn-primary" name="orders" type="submit" style="background:#717ce8">Show orders</button></a>
+                        <a href=""><button class="btn btn-primary" name="orders" type="submit" style="">Show orders</button></a>
                         </form>
                       </div>
                     </div>
@@ -164,7 +164,7 @@ if (isset($_POST['update'])) {
           <div class="card-body">
             <h6 class="card-title font-weight-bold">Support</h6>
             <p class="card-text">Get fast, free help from our friendly assistants.</p>
-            <button type="button" class="btn btn-primary" style="background:#717ce8"><a href="./about.php" style="color:white">Contact Us</a></button>
+            <button type="button" class="btn btn-primary" style=""><a href="./about.php" style="color:white">Contact Us</a></button>
           </div>
         </div>
       </div>

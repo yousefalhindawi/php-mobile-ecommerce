@@ -17,31 +17,31 @@ if(isset($_POST["sendmessage"]) && ($_POST["sendmessage"] == 'Send Message')) {
    $to = 'yousefalhindawe@gmail.com';
 
    $name = trim(stripslashes($_POST['name']));
-   $from = trim(stripslashes($_POST['email']));
+   $email = trim(stripslashes($_POST['email']));
    $subject = "Contact mail";
    $message = trim(stripslashes($_POST['message']));
-   $headers = "From: $from";
+  //  $headers = "From: $from";
 
 
 
    
 
 
-   // Set Message
-  //  $message .= "Email from: " . $name . "<br />";
-	//  $message .= "Email address: " . $email . "<br />";
-  //  $message .= "Message: <br />";
-  //  $message .= nl2br($contact_message);
-  //  $message .= "<br /> ----- <br /> This email was sent from your site " . url() . " contact form. <br />";
+  //  Set Message
+   $message .= "Email from: " . $name . "<br />";
+	 $message .= "Email address: " . $email . "<br />";
+   $message .= "Message: <br />";
+   $message .= nl2br($message);
+   $message .= "<br /> ----- <br /> This email was sent from your site " . url() . " contact form. <br />";
 
    // Set From: header
-  //  $from =  $name . " <" . $email . ">";
+   $from =  $name . " <" . $email . ">";
 
    // Email Headers
-	// $headers = "From: " . $from . "\r\n";
-	// $headers .= "Reply-To: ". $email . "\r\n";
- 	// $headers .= "MIME-Version: 1.0\r\n";
-	// $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+	$headers = "From: " . $from . "\r\n";
+	$headers .= "Reply-To: ". $email . "\r\n";
+ 	$headers .= "MIME-Version: 1.0\r\n";
+	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
  
   // ini_set("sendmail_from", $to); // for windows server

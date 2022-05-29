@@ -150,7 +150,7 @@ if (!$stmt->execute([$p_id])) {
           <form action="" method="POST">
             <div class="product_count">
               <label for="sst"  style="color:#707bfb;fontsize">Quantity:</label><br />
-              <input type="number" name="quantity"  id="sst" min="1" value="1" title="Quantity:" class="form-control" style = "width: 165px"/>
+              <input type="number" name="quantity"  id="sst" min="1" value="1" title="Quantity:" class="form-control" style = "width: 110px"/>
               <input type="hidden" name="pcid" value="<?php echo $product_id; ?>">
               <input type="hidden" name="ucid" value="<?php echo $_SESSION['userLogin'] ?>">
               <input type="hidden" name="image" value="<?php echo $product_m_img ?>">
@@ -187,7 +187,7 @@ if (!$stmt->execute([$p_id])) {
             </select>
             
             <div class="card_area">
-              <button class="myBtn" type="submit" value="addalert"><a class="main_btn my-3" >Add to cart</a></button>
+              <button class="myBtn" type="submit" value="addalert"><a class="my-3 btn btn-primary" >Add to cart</a></button>
 
               <?php  if (!isset($_SESSION['userLogin']) && isset($_GET['addlog']) && $_GET['addlog'] == 'addalert') { ?>
   
@@ -229,11 +229,11 @@ if (!$stmt->execute([$p_id])) {
   <div class="container">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item">
-        <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Description</a>
+        <a class="nav-link btn btn-primary" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Description</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="true">Comments</a>
+        <a class="nav-link btn btn-primary" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="true">Comments</a>
       </li>
 
     </ul>
@@ -312,7 +312,7 @@ if (!$stmt->execute([$p_id])) {
                     </div>
                   </div>
                   <div class="col-md-12 text-right">
-                    <button type="submit" name="comment" class="btn submit_btn">
+                    <button type="submit" name="comment" class="btn btn-primary ">
                       Submit Now
                     </button>
                   </div>

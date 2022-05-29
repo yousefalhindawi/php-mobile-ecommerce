@@ -43,15 +43,13 @@
         <!-- Grid column -->
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           <!-- Content -->
-          <h6 class="text-uppercase fw-bold">Company name</h6>
+          <h6 class="text-uppercase fw-bold">SMART</h6>
           <hr
               class="mb-4 mt-0 d-inline-block mx-auto"
               style="width: 60px; background-color: #7c4dff; height: 2px"
               />
           <p>
-            Here you can use rows and columns to organize your footer
-            content. Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit.
+          SMART is the leading distributor and retailer of mobile devices in the Middle East, representing some of leading brands in the world since its inception in 2022.
           </p>
         </div>
         <!-- Grid column -->
@@ -65,16 +63,16 @@
               style="width: 60px; background-color: #7c4dff; height: 2px"
               />
           <p>
-            <a href="#!" class="text-white" style="text-decoration:none;">MDBootstrap</a>
+            <a href="#!" class="text-white" style="text-decoration:none;">MOBILE</a>
           </p>
           <p>
-            <a href="#!" class="text-white" style="text-decoration:none;">MDWordPress</a>
+            <a href="#!" class="text-white" style="text-decoration:none;">TABLET</a>
           </p>
           <p>
-            <a href="#!" class="text-white" style="text-decoration:none;">BrandFlow</a>
+            <a href="#!" class="text-white" style="text-decoration:none;">ACCESSORIES</a>
           </p>
           <p>
-            <a href="#!" class="text-white" style="text-decoration:none;">Bootstrap Angular</a>
+            <a href="#!" class="text-white" style="text-decoration:none;">COMPUTERS</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -91,7 +89,7 @@
             <a href="#!" class="text-white" style="text-decoration:none;">Your Account</a>
           </p>
           <p>
-            <a href="#!" class="text-white" style="text-decoration:none;">Become an Affiliate</a>
+            <a href="#!" class="text-white" style="text-decoration:none;">Career</a>
           </p>
           <p>
             <a href="#!" class="text-white" style="text-decoration:none;">Shipping Rates</a>
@@ -111,7 +109,7 @@
               style="width: 60px; background-color: #7c4dff; height: 2px"
               />
           <p><i class="fa fa-home mr-3"></i> IRBID, JORDAN</p>
-          <p><i class="fa fa-envelope mr-3"></i> info@example.com</p>
+          <p><i class="fa fa-envelope mr-3"></i> yousefalhindawe@gmail.com</p>
           <p><i class="fa fa-phone mr-3"></i> +962790640416</p>
           <p><i class="fa fa-print mr-3"></i> +962790640416</p>
         </div>

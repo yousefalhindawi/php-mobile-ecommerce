@@ -75,7 +75,7 @@ if (isset($_SESSION['refresh']) && $_SESSION['refresh'] == true) {
       <div class="col-lg-12">
         <div class="main_title">
           <h1><span style="color:#707bfb;">Top Category</span></h1>
-          <p>Bring called seed first of third give itself now ment</p>
+          <p>Keep connected, productive, and entertained with the best products and services</p>
         </div>
       </div>
     </div>
@@ -214,7 +214,7 @@ if (isset($_SESSION['refresh']) && $_SESSION['refresh'] == true) {
       <div class="col-lg-12">
         <div class="main_title">
           <h1><span style="color:#707bfb;">Featured product</span></h1>
-          <p>Bring called seed first of third give itself now ment</p>
+          <p>Keep connected, productive, and entertained with the best products and services</p>
         </div>
       </div>
     </div>

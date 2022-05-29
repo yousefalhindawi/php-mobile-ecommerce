@@ -21,7 +21,7 @@ if ($coun === 0 ){
                       <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" class="img-fluid mb-4 mr-3">
                       <h3><strong>Your Cart is Empty</strong></h3>
                       <h4>Add something to make me happy :)</h4>
-                      <a href="#" class="btn btn-primary cart-btn-transform m-3" data-abc="true" style="background-color: #717ce8;">continue shopping</a>
+                      <a href="#" class="cart-btn-transform m-3 btn btn-primary" data-abc="true" style="">continue shopping</a>
                   </div>
               </div>
           </div>
@@ -63,7 +63,7 @@ foreach ($cart  as $value) :
 <td  ><img src = "./admin/product/images/<?php echo $value['Product_image']; ?>" width = "90px"></td>
 <td style='padding-top : 50px;'><?php echo $value['Product_name']; ?></td> 
 <td  style='padding-top : 50px;'><form action ="#"  method="post" style=" color: #f4b7b4;"><input type="hidden"  name="ID" value ="<?php echo $value['product_id']; ?>"><input type="number" name="q" min ="1" style=" width: 50px" value="<?php echo $value['quantity'];
-$Qu+=$value['quantity'];?>">  <input type="submit" class="btn btn-primary" name="Update" value="Update Cart" style="background-color:  #717ce8;  color: white; border: none; "></td> 
+$Qu+=$value['quantity'];?>">  <input type="submit" class="btn btn-primary" name="Update" value="Update Cart" style="  color: white; border: none; "></td> 
 <td  style='padding-top : 50px;'><input type ='hidden' name ="priceid" value ="<?php   $sub_price =$value['quantity'] * $value['sub_total'] ; echo $sub_price ?>" > 
 <label><?php $totel += $sub_price ; 
 echo $sub_price ;?></label>
@@ -77,7 +77,7 @@ endforeach ;
 <td colspan="5"  style=" padding:2% 0;">
 <form action ="#"  method="post" style=" color: #f4b7b4;">
 <input type="text" name="copone" style="  height: 30px" placeholder="Coupon code">
-<input type="submit" class="btn btn-primary" name="couponbtn" value="Applay coupon" style="background-color: #717ce8;  color: white; border: none;">
+<input type="submit" class="btn btn-primary" name="couponbtn" value="Applay coupon" style="  color: white; border: none;">
 <!-- <input type="submit" class="btn btn-primary" name="Update" value="Update Cart" style="background-color:  #717ce8;  color: white; border: none; "> -->
 </form>
 </td>
@@ -122,8 +122,8 @@ endforeach ;
 </table> 
 <form  method="post" style=" color: #f4b7b4;">
 <div class="col-md-12 text-right">
-<a href="./category.php" class="btn btn-primary cart-btn-transform " data-abc="true" style="background-color: #717ce8;">continue shopping <i class='fas fa-cart-arrow-down'></i></a>
-<a href="cheackout.php" class="btn btn-primary cart-btn-transform " data-abc="true" style="background-color: #717ce8;">Proceed to checkout</a>
+<a href="./category.php" class="btn btn-primary cart-btn-transform " data-abc="true" style="">continue shopping <i class='fas fa-cart-arrow-down'></i></a>
+<a href="cheackout.php" class="btn btn-primary cart-btn-transform " data-abc="true" style="">Proceed to checkout</a>
 </div>
 </form>
 </div>

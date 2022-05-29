@@ -130,7 +130,7 @@
                         </div>
                     </div>
                     <hr class="mb-4">
-                    <input class="btn btn-primary btn-lg btn-block" type="submit" name="checkbtn" value="Continue to checkout" style="background-color:  #717ce8;  color: white; border: none; ">
+                    <input class="btn btn-primary btn-lg btn-block" type="submit" name="checkbtn" value="PLACE ORDER" style="  color: white; border: none; ">
                 </form>
             </div>
         </div>
